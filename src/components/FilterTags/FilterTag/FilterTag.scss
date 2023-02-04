@@ -1,0 +1,20 @@
+.aeb-filter-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    border: 2px solid var(--gray-8c);
+    color: var(--gray-8c);
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+
+    &--active {
+        background-color: var(--darkblue);
+        border: 2px solid var(--darkblue);
+        color: var(--white);
+    }
+}

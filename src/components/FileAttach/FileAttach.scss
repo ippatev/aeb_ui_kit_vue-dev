@@ -1,0 +1,147 @@
+.attach {
+    box-sizing: border-box;
+    padding: 24px;
+    border: 2px dashed var(--gray-primary);
+    border-radius: 10px;
+    color: var(--darkblue);
+
+    &--file-in-focus {
+        border: 2px dashed var(--blue);
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    &__passport-wrapper {
+        display: flex;
+        margin-top: 22px;
+        flex-wrap: wrap;
+    }
+
+    &__passport-item {
+        display: flex;
+        align-items: center;
+        max-width: 488px;
+    }
+
+    &__passport-icon {
+        width: 52px;
+        height: 52px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &--primary {
+            background: url('../../assets/images/attach/passport_primary.svg');
+        }
+
+        &--secondary {
+            background: url('../../assets/images/attach/passport_secondary.svg');
+        }
+    }
+
+    &__passport-title {
+        font-family: 'Roboto-Regular';
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--gray-primary);
+        margin-left: 16px;
+        max-width: 175px;
+    }
+
+    &__doclist {
+        margin-top: 22px;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--gray-primary);
+        max-width: 488px;
+    }
+
+    &__button-wrapper {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__file-message {
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    &__remove-icon {
+        margin-left: 25px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: var(--blue);
+                }
+            }
+        }
+    }
+
+    &__images {
+        &::before {
+            background: url('../../assets/images/clip.svg');
+            background: url('../../assets/images/clip_blue.svg');
+        }
+    }
+
+    &--salary-portal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .attach__upload-icon {
+            margin-top: 16px;
+        }
+
+        .attach__info-txt {
+            margin-top: 16px;
+            font-size: 16px;
+            color: var(--gray-primary);
+        }
+
+        .attach__btn-left {
+            margin-right: 20px;
+            font-size: 14px;
+            color: var(--gray-primary);
+        }
+    }
+
+    &--simple {
+        //width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        border: none;
+        color: var(--darkblue);
+    }
+
+    &__button-wrapper--simple {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

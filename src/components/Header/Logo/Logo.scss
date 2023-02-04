@@ -1,0 +1,18 @@
+.aeb-header-logo {
+    color: var(--white) !important;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aeb-header-logo-icon {
+    margin-right: 18px;
+}
+
+.aeb-header-logo-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}

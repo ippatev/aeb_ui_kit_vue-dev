@@ -1,0 +1,100 @@
+$padding-visa: 24px 22px 24px 22px;
+$size-icon: 20px;
+
+.aeb-visa {
+    width: 100%;
+    background: var(--white);
+    border-radius: 12px;
+    padding: $padding-visa;
+    box-sizing: border-box;
+    color: var(--darkblue);
+
+    > h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .aeb-visa-timeline {
+        margin-top: 3rem;
+
+        > .aeb-visa-item {
+            margin-bottom: 2rem;
+            display: flex;
+        }
+
+        & .aeb-visa-item:last-child {
+            margin-bottom: 0rem;
+
+            .aeb-visa-progress {
+                display: none;
+            }
+        }
+
+        .aeb-visa-icon {
+            position: relative;
+            z-index: 2;
+            width: $size-icon;
+            height: $size-icon;
+            flex: none;
+            display: block;
+
+            > svg {
+                width: $size-icon;
+            }
+        }
+
+        .aeb-visa-progress {
+            width: 2px;
+            height: 70px;
+            background: #e7eaec;
+            z-index: -1;
+            position: relative;
+            top: -($size-icon/2-1px);
+            left: $size-icon/2-1px;
+
+            &.agreed {
+                background: #00bf41;
+            }
+        }
+
+        .aeb-visa-status {
+            margin-left: 20px;
+
+            &.isReturned {
+                .aeb-visa-title {
+                    color: #ff3055;
+                }
+            }
+
+            &.isAgreed {
+                .aeb-visa-title {
+                    color: #00bf41;
+                }
+            }
+        }
+    }
+}
+
+.aeb-visa-title {
+    font-size: 16px;
+    line-height: 22px;
+    color: #27303e;
+}
+
+.aeb-visa-subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #9ca8af;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .aeb-visa {
+        > h3 {
+            font-size: 14px;
+        }
+    }
+}

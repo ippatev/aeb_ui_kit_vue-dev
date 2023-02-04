@@ -1,0 +1,62 @@
+.test-component {
+    padding: 16px 0;
+    max-height: 144px;
+    overflow: auto;
+    max-width: 360px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e1e4e7;
+}
+
+.test-component::-webkit-scrollbar {
+    width: 4px;
+}
+
+.test-component::-webkit-scrollbar-thumb {
+    background-color: #d5e8fc;
+    outline: none;
+    border-radius: 2px;
+}
+
+.test-component__item {
+    display: flex;
+    align-items: center;
+}
+
+.test-component__item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.test-component__date {
+    color: #a3aaae;
+    font-size: 14px;
+    margin-right: 12px;
+}
+
+.test-component__content {
+    word-break: keep-all;
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.show-all {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+.show-all__btn {
+    color: #2f88f0;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.test-component--expanded {
+    max-height: unset;
+}

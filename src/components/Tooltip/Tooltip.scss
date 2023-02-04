@@ -1,0 +1,97 @@
+@keyframes out {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.aeb-new-tooltip {
+    background-color: var(--darkblue);
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    transition: opacity, 0.2s;
+    z-index: 9999;
+
+    &--open {
+        opacity: 1;
+        animation: out 0.2s;
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        word-break: keep-all;
+        white-space: nowrap;
+        color: var(--white);
+    }
+
+    &--top {
+        .aeb-new-tooltip__container {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: var(--darkblue);
+                left: calc(50% - 16px);
+                bottom: -5px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &--right {
+        .aeb-new-tooltip__container {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: var(--darkblue);
+                left: -5px;
+                top: calc(50% - 5px);
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &--bottom {
+        .aeb-new-tooltip__container {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: var(--darkblue);
+                left: calc(50% - 16px);
+                top: -5px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &--left {
+        .aeb-new-tooltip__container {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: var(--darkblue);
+                right: 19px;
+                top: calc(50% - 5px);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

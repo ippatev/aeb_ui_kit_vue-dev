@@ -1,0 +1,36 @@
+.hoverClass:hover .icon-left svg rect {
+    stroke: #00b1e9;
+}
+
+.hoverClass:hover .icon-left svg path {
+    stroke: #00b1e9;
+}
+
+.hoverClass:hover .icon-right svg path {
+    stroke: #00b1e9;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon-left {
+    margin-right: 8px;
+}
+
+.icon-right {
+    margin-left: 10px;
+}
+
+.icon svg path,
+.icon svg rect,
+.icon svg path {
+    stroke: #2f88f0;
+}
+
+.solid svg path,
+.solid svg rect,
+.solid svg path {
+    stroke: white;
+}

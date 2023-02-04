@@ -1,0 +1,13 @@
+.aeb-action-bar {
+    position: fixed;
+    bottom: -90px;
+    width: 100vw;
+    height: 90px;
+    background-color: var(--white);
+    transition: position, 0.2s;
+    z-index: 1000;
+
+    &--open {
+        bottom: 0;
+    }
+}

@@ -1,0 +1,41 @@
+.aeb-footer-bottom {
+    width: 100%;
+    padding: 24px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+    position: relative;
+
+    @media screen and (max-width: 1000px) {
+        padding-left: 16px;
+    }
+
+    &__rights {
+        color: rgba($color: #fff, $alpha: 0.2);
+        font-size: 16px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    &__soc-networks {
+        position: absolute;
+        top: 16px;
+        right: 0;
+
+        @media screen and (max-width: 1000px) {
+            position: static;
+            margin-top: 16px;
+        }
+    }
+
+    &__soc-icon {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}

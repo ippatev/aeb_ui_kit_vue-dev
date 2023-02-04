@@ -1,0 +1,204 @@
+.aeb-sidebar {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--darkblue);
+
+    background-color: var(--white);
+    height: calc(100vh - 80px);
+    border-right: 2px solid #f3f3f3;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 1001;
+
+    &.right {
+        left: auto;
+        right: 0;
+        border-right: none;
+        border-left: 2px solid #f3f3f3;
+
+        .aeb-sidebar-toggle-icon {
+            transform: scaleX(-1);
+        }
+    }
+
+    &-items {
+        width: 100%;
+        padding: 14px 0 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: 100%;
+
+        &-icon {
+            display: flex;
+            flex: 0 0 auto;
+            width: 28px;
+            height: 28px;
+            opacity: 0.8;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+
+            svg {
+                fill: var(--gray);
+            }
+        }
+
+        &-label {
+            color: var(--darkblue);
+            display: none;
+            font-size: 16px;
+            margin-left: 18px;
+        }
+
+        &:hover {
+            background-color: var(--white-hover);
+            text-decoration: none;
+
+            > a {
+                text-decoration: none;
+            }
+        }
+
+        &.active {
+            pointer-events: none;
+
+            .aeb-sidebar-item-label {
+                color: var(--blue);
+            }
+
+            .aeb-sidebar-item-icon {
+                svg {
+                    fill: var(--blue);
+                }
+            }
+        }
+    }
+
+    &-footer {
+        margin-top: auto;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: var(--gray);
+
+        a {
+            color: var(--blue);
+        }
+    }
+
+    &-toggle-icon {
+        cursor: pointer;
+        user-select: none;
+        margin: 0 8px 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        height: 50px;
+        margin-top: 16px;
+        transition: all linear 230ms;
+
+        > svg {
+            transition: all ease 230ms;
+        }
+
+        &:hover {
+            background-color: #f3f3f3;
+
+            > svg {
+                transform: translateX(2px);
+            }
+        }
+    }
+
+    &.open {
+        width: 260px;
+
+        .aeb-sidebar-item {
+            padding: 14px 28px;
+            justify-content: flex-start;
+        }
+
+        .aeb-sidebar-item-label {
+            display: inline-block;
+        }
+
+        .aeb-sidebar-toggle-icon {
+            background-color: #f3f3f3;
+
+            > svg {
+                transform: scaleX(-1);
+            }
+
+            &:hover {
+                background-color: #e7e7e7;
+
+                > svg {
+                    transform: translateX(-2px) scaleX(-1);
+                }
+            }
+        }
+    }
+
+    &--burger {
+        display: block;
+        transition: width, 0.2s;
+        overflow: hidden;
+        width: 68px;
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .aeb-sidebar-items {
+                overflow: auto;
+            }
+        }
+
+        .aeb-sidebar-burger {
+            height: 70px;
+            padding: 28px 24px;
+            box-sizing: border-box;
+
+            &__icon {
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+
+        .aeb-sidebar-items {
+            width: 260px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 0 24px;
+            display: block;
+        }
+
+        .aeb-sidebar-footer {
+            margin-bottom: 32px;
+            width: 200px;
+        }
+    }
+}

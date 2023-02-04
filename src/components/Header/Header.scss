@@ -1,0 +1,31 @@
+.aeb-header {
+    height: 80px;
+    width: 100%;
+    background-color: var(--darkblue);
+    padding: 0 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+
+    &.white {
+        background-color: #fff;
+        color: var(--darkblue);
+        border-bottom: 1px solid var(--lightgray);
+
+        .aeb-header-logo-text {
+            color: var(--darkblue);
+        }
+    }
+}
+
+.aeb-header-subtitle {
+    color: var(--gray-primary);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-left: 24px;
+}

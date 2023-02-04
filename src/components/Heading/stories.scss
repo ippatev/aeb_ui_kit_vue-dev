@@ -1,0 +1,30 @@
+.desc {
+    margin-bottom: 70px;
+    font-size: 18px;
+}
+
+.table {
+    width: 600px;
+}
+
+.table__row {
+    display: flex;
+}
+
+.table__head {
+    margin-right: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table__sep {
+    width: 50px;
+    height: 2px;
+    background: #27303e;
+    margin-top: 12px;
+}
+
+.table__desc {
+    margin-top: 12px;
+    font-weight: 500;
+}

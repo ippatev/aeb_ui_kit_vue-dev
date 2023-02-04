@@ -1,0 +1,23 @@
+.aeb-label {
+    background-color: #d5e8fc;
+    border-radius: 16px;
+    padding: 7px 11px 7px 21px;
+    height: 32px;
+    box-sizing: border-box;
+    display: inline-block;
+
+    &-text {
+        color: var(--blue);
+        font-size: 16px;
+        line-height: 18px;
+        float: left;
+    }
+
+    &-icon-close {
+        height: 14px;
+        box-sizing: border-box;
+        float: right;
+        margin-left: 11px;
+        margin-top: 1px;
+    }
+}

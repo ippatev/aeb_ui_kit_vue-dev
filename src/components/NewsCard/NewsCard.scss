@@ -1,0 +1,27 @@
+.aeb-news-card {
+    box-sizing: border-box;
+    max-width: 320px;
+    color: var(--darkblue);
+
+    &__date {
+        padding: 9px 10px;
+        box-sizing: border-box;
+        font-size: 12px;
+        border: 1px solid var(--lightblue);
+        border-radius: 16px;
+        display: block;
+        width: fit-content;
+        margin-bottom: 16px;
+    }
+
+    &__content {
+        a {
+            text-decoration: none;
+            color: var(--blue);
+        }
+
+        max-width: 320px;
+        text-decoration: none !important;
+        font-size: 16px;
+    }
+}

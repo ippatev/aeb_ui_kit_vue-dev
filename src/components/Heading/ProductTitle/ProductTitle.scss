@@ -1,0 +1,21 @@
+.aeb-product-title {
+    color: var(--darkblue);
+
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__back {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__heading {
+        font-size: 32px;
+    }
+}

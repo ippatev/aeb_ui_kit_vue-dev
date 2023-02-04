@@ -1,0 +1,176 @@
+.aeb-checkbox-container {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.aeb-checkbox-layout {
+    display: flex;
+    user-select: none;
+    color: var(--darkblue);
+}
+
+.aeb-checkbox-indicator {
+    border: 2px solid var(--gray-primary);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+
+    > svg {
+        opacity: 0;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border: 2px solid var(--blue-turquoise);
+        }
+
+        &:active {
+            background-image: var(--active-gradient);
+            padding: 2px;
+            border: none;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                content: '';
+                width: 18px;
+                height: 18px;
+                background-color: white;
+                border-radius: 2px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+.aeb-checkbox-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--darkblue);
+    margin-left: 12px;
+    margin-top: 1px;
+    user-select: none;
+}
+
+.aeb-checkbox-checked {
+    .aeb-checkbox-indicator {
+        background-color: var(--blue);
+        border-color: var(--blue);
+
+        > svg {
+            opacity: 1;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--blue-turquoise);
+                border: 2px solid var(--blue-turquoise);
+            }
+
+            &:active {
+                background-image: var(--active-gradient);
+
+                &:hover {
+                    background-image: var(--active-gradient);
+                    border: none;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    background-color: transparent;
+                    border-radius: 2px;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
+.aeb-checkbox-disabled {
+    .aeb-checkbox-indicator {
+        border: 2px solid var(--gray-primary);
+
+        @media (hover: hover) {
+            &:hover {
+                border: 2px solid var(--gray-primary);
+            }
+
+            &:active {
+                background: white !important;
+                border: 2px solid var(--gray-primary) !important;
+
+                &::before {
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    background-color: transparent;
+                    border-radius: 2px;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+
+    .aeb-checkbox-label {
+        opacity: 0.6;
+    }
+}
+
+.aeb-checkbox-checked-disabled {
+    .aeb-checkbox-indicator {
+        background: var(--gray-primary);
+
+        @media (hover: hover) {
+            &:hover {
+                background: var(--gray-primary);
+            }
+
+            &:active {
+                background: var(--gray-primary) !important;
+                border: none !important;
+
+                &::before {
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    background-color: transparent;
+                    border-radius: 2px;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
+.aeb-checkbox-error {
+    .aeb-checkbox-indicator {
+        color: var(--red) !important;
+        border-color: var(--red) !important;
+    }
+
+    .aeb-checkbox-label {
+        color: var(--red) !important;
+    }
+}
